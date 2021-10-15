@@ -16,6 +16,7 @@ namespace Portfolio.WebUI.Model.DataContexts
         }
 
         public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Project> Projects { get; set; }
 
 
     }

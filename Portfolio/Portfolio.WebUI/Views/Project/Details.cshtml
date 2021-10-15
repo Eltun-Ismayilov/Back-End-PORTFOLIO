@@ -1,0 +1,52 @@
+﻿
+@model Project
+
+@{
+    ViewData["Title"] = "Blog Details";
+}
+
+
+<nav>
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-tabis" aria-expanded="false"> <span class="tittle">MENU</span> <span class="fa fa-navicon icon-nav" aria-hidden="true"></span> </button>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="nav-tabis">
+        <ul class="isop-filter nav nav-pills">
+            <li role="presentation" class=""><a asp-controller="Home" asp-action="index"><i class="icon-user"></i> ABOUT ME</a></li>
+            <li role="presentation" class=""><a asp-controller="Resume" asp-action="index"><i class="icon-book-open"></i>RESUME</a></li>
+            <li role="presentation"class="active"><a asp-controller="Home" asp-action="Portfolio"><i class="icon-rocket"></i>PORTFOLIO</a></li>
+            <li role="presentation" ><a asp-controller="Blog" asp-action="Index"><i class="icon-note"></i>BLOG</a></li>
+            <li role="presentation"><a asp-controller="Home" asp-action="Contact"> <i class="icon-pencil"></i>CONTACT ME</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<div class="inside-sec blog">
+    <!-- BIO AND SKILLS -->
+    <h5 class="tittle">BLOG POST</h5>
+
+    <!-- Blog -->
+    <article class="blog-post width-100 padding-25">
+        <div class="post-img">
+            <img src="~/uploads/images/portfolio/5/@Model.ImagePath" alt="">
+            <span class="date-in">@Model.CreateData</span>
+        </div>
+
+        <!-- BLOG DETAIL -->
+        <h4 class="font-normal">@Model.ProjectName</h4>
+        <span class="post-bt">by <span class="text-color-primary">Eltun</span></span>
+        <ul class="post-info">
+
+            <li> <i class="fa fa-bookmark-o"></i>@Model.ProjectType </li>
+            <li> <i class="fa fa-bookmark-o"></i><a href="@Model.CLink" target="_blank">GithuB</a> </li>
+
+        </ul>
+        <p>
+         @Model.Description        
+        </p>
+
+    </article>
+</div>
+
+

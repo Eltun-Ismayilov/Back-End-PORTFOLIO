@@ -24,13 +24,9 @@ namespace Portfolio.WebUI.Controllers
             return View();
         }
 
-        public IActionResult Portfolio()
-        {
-            return View();
-        }
 
+    
         //+
-
         public IActionResult Contact()
         {
             return View();
@@ -38,7 +34,7 @@ namespace Portfolio.WebUI.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-
+        //+
         public IActionResult Contact(Contact model)
         {
             if (ModelState.IsValid)
