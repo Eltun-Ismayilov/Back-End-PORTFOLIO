@@ -3351,7 +3351,7 @@ blockquote {
 }
 
     #content.bg {
-        background: url(../images/parallax-bg.jpg) fixed center top no-repeat;
+        background: url(../../uploads/images/parallax-bg.jpg) fixed center top no-repeat;
         display: inline-block;
         width: 100%;
         padding-top: 100px;
