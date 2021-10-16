@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MediatR;
+using Microsoft.AspNetCore.Mvc;
+using Portfolio.WebUI.Appcode.Application.BlogMolus;
 using Portfolio.WebUI.Model.DataContexts;
 using System;
 using System.Collections.Generic;
@@ -10,26 +12,27 @@ namespace Portfolio.WebUI.Controllers
     public class BlogController : Controller
     {
 
-        readonly PortfolioDbContext db;
+        readonly IMediator db;
 
-        public BlogController(PortfolioDbContext db)
+        public BlogController(IMediator db)
         {
             this.db = db;
 
 
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index(BlogPagedQuery query)
         {
 
-            var data = db.BlogPosts.Where(b => b.DeleteByUserId == null).ToList();
+            var respons = await db.Send(query);
 
-            return View(data);
+            return View(respons);
         }
-        public IActionResult Details(int id)
+        public async Task<IActionResult> Details(BlogSingleQuery query)
         {
-            var data = db.BlogPosts.FirstOrDefault(b => b.DeleteByUserId == null && b.Id == id);
 
-            return View(data);
+            var respons = await db.Send(query);
+
+            return View(respons);
         }
     }
 }

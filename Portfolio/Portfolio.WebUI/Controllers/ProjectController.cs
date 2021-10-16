@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MediatR;
+using Microsoft.AspNetCore.Mvc;
+using Portfolio.WebUI.Appcode.Application.ProjectMolus;
 using Portfolio.WebUI.Model.DataContexts;
 using System;
 using System.Collections.Generic;
@@ -9,31 +11,27 @@ namespace Portfolio.WebUI.Controllers
 {
     public class ProjectController : Controller
     {
-        readonly PortfolioDbContext db;
 
-        public ProjectController(PortfolioDbContext db)
+        readonly IMediator db;
+
+        public ProjectController(IMediator db)
         {
             this.db = db;
 
 
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index(ProjectPagedQuery query)
         {
 
-            //var productcount = 3;
-            //ViewBag.PagesCaunt = decimal.Ceiling((decimal)db.Projects.Where(d => d.DeleteByUserId == null).Count() / productcount);
-            //ViewBag.Page = page;    // 1
+            var respons = await db.Send(query);
 
-            var data= db.Projects.Where(b => b.DeleteByUserId == null).ToList();
-
-
-            return View(data);
+            return View(respons);
         }
-        public IActionResult Details(int id)
+        public async Task<IActionResult> Details(ProjectSingleQuery query)
         {
-            var data = db.Projects.FirstOrDefault(b => b.DeleteByUserId == null && b.Id == id);
+            var respons = await db.Send(query);
 
-            return View(data);
+            return View(respons);
         }
     }
 }

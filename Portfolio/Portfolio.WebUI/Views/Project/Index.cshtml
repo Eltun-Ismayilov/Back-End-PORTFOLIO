@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Project>
+﻿@model PagedViewModel<Project>
 @{
     ViewData["Title"] = "Portfolio";
 }
@@ -28,7 +28,7 @@
 
                 <!-- ITEM -->
 
-                @foreach (var item in Model)
+                @foreach (var item in Model.Items)
                 {
                     <!-- ITEM -->
                     <article class="portfolio-item mix pf-web-design" data-inter-pos-x="0" data-inter-pos-y="0" data-final-pos-x="0" data-final-pos-y="0" style="transition: all 600ms ease 0ms, opacity 600ms linear; display: inline-block; transform: translate(0px, 0px);" data-bound="true">

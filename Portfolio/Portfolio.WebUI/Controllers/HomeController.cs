@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MediatR;
+using Microsoft.AspNetCore.Mvc;
+using Portfolio.Application.Modules.ContactModules.ContactUser;
 using Portfolio.WebUI.Model.DataContexts;
 using Portfolio.WebUI.Model.Entity;
 using System;
@@ -10,12 +12,13 @@ namespace Portfolio.WebUI.Controllers
 {
     public class HomeController : Controller
     {
-        readonly PortfolioDbContext db;
 
-        public HomeController(PortfolioDbContext db)
+        readonly IMediator db;
+
+        public HomeController(IMediator db)
         {
             this.db = db;
-           
+
 
         }
         //+
@@ -35,31 +38,11 @@ namespace Portfolio.WebUI.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         //+
-        public IActionResult Contact(Contact model)
+        public async Task<IActionResult> Contact(ContactCreateCommand query)
         {
-            if (ModelState.IsValid)
-            {
-                db.Contacts.Add(model);
 
-                db.SaveChanges();
-
-               
-                return Json(new
-                {
-                    // error yoxdusa bura dusur
-                    error = false,
-                    message = "Sorgunuz qeyde alindir"
-                });
-
-
-            }
-            return Json(new
-            {
-
-                // error varsa bura dusur
-                error = true,
-                message = "Mellumatin dogrulugnu yoxluyun"
-            });
+            var respons = await db.Send(query);
+            return Json(respons);
         }
 
     }

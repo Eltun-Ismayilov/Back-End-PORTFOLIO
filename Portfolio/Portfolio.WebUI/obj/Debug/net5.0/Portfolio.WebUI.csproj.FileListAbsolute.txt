@@ -266,3 +266,5 @@ C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\bin\Debug\net
 C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\bin\Debug\net5.0\libman.json
 C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net5.0\Razor\Views\Project\Index.cshtml.g.cs
 C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net5.0\Razor\Views\Project\Details.cshtml.g.cs
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\bin\Debug\net5.0\MediatR.dll
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\bin\Debug\net5.0\MediatR.Extensions.Microsoft.DependencyInjection.dll

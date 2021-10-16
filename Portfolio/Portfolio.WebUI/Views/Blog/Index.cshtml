@@ -1,11 +1,10 @@
-﻿@model IEnumerable<BlogPost>
+﻿@model PagedViewModel<BlogPost>
 
 @{
     ViewData["Title"] = "Blog";
 }
 
 
-<
 
 <div role="tabpanel" class="tab-pane fade  in" id="blog">
     <div class="inside-sec">
@@ -15,7 +14,7 @@
         <!-- Blog -->
         <section class="blog blog-page padding-20 padding-top-50 padding-bottom-50 ">
 
-            @foreach (var item in Model)
+            @foreach (var item in Model.Items)
             {
                 <!-- Blog Post -->
                 <article>
@@ -23,7 +22,7 @@
                     <div class="post-info">
                         <div class="post-in">
                             <div class="extra"> <span><i class="icon-calendar"></i>@item.CreateData</span> <span class="margin-left-15"><i class="icon-user"></i>Admin</span> <span class="margin-left-15"><i class="icon-bubbles"></i> Featured</span></div>
-                            <a asp-action="Details" asp-route-id="@item.Id"  class="tittle-post"> @item.Title </a>
+                            <a asp-action="Details" asp-route-id="@item.Id" class="tittle-post"> @item.Title </a>
                             <p>@item.Description</p>
                             <a asp-action="Details" asp-route-id="@item.Id" class="btn-1">Read MOre <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                         </div>
@@ -34,12 +33,15 @@
 
 
             <!-- Pagination -->
-            <ul class="pagination">
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">Next</a></li>
-            </ul>
+            @*<ul class="pagination">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">Next</a></li>
+                </ul>*@
+            <div>
+                @Model.GetPagenation(Url, "index", "Admin")
+            </div>
         </section>
     </div>
 </div>
