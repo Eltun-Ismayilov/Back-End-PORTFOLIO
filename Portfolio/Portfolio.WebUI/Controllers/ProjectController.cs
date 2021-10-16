@@ -17,12 +17,12 @@ namespace Portfolio.WebUI.Controllers
 
 
         }
-        public IActionResult Index(int page = 1)
+        public IActionResult Index()
         {
 
-            var productcount = 3;
-            ViewBag.PagesCaunt = decimal.Ceiling((decimal)db.Projects.Where(d => d.DeleteByUserId == null).Count() / productcount);
-            ViewBag.Page = page;    // 1
+            //var productcount = 3;
+            //ViewBag.PagesCaunt = decimal.Ceiling((decimal)db.Projects.Where(d => d.DeleteByUserId == null).Count() / productcount);
+            //ViewBag.Page = page;    // 1
 
             var data= db.Projects.Where(b => b.DeleteByUserId == null).ToList();
 
