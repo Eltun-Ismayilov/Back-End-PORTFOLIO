@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MediatR;
+using Microsoft.AspNetCore.Mvc;
+using Portfolio.WebUI.Appcode.Application.ResumeMolus;
+using Portfolio.WebUI.Model.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +11,18 @@ namespace Portfolio.WebUI.Controllers
 {
     public class ResumeController : Controller
     {
-        public IActionResult Index()
+        readonly IMediator db;
+
+        public ResumeController(IMediator db)
         {
-            return View();
+            this.db = db;
+
+
+        }
+        public async Task<IActionResult> Index(ResumList query)
+        {
+            var respons = await db.Send(query);
+            return View(respons);
         }
     }
 }
