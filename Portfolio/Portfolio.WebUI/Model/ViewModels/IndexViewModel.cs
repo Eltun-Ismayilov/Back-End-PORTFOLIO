@@ -11,6 +11,7 @@ namespace Portfolio.WebUI.Model.ViewModels
         public List<Icons> Iconss { get; set; }
         public List<Services> Servicess { get; set; }
         public List<Skill> Skills { get; set; }
+        public PersonalDetails PersonalDetailss { get; set; }
 
     }
 }
