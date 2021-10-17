@@ -22,6 +22,8 @@ namespace Portfolio.WebUI.Model.DataContexts
         public DbSet<Education> Educations { get; set; }
         public DbSet<Bio> Bios { get; set; }
         public DbSet<Skill> Skills { get; set; }
+        public DbSet<Icons> Icons { get; set; }
+        public DbSet<Services> Services { get; set; }
 
 
 

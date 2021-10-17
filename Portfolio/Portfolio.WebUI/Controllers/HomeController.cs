@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Portfolio.Application.Modules.ContactModules.ContactUser;
+using Portfolio.WebUI.Appcode.Application.IndexMolus;
 using Portfolio.WebUI.Model.DataContexts;
 using Portfolio.WebUI.Model.Entity;
 using System;
@@ -22,9 +23,10 @@ namespace Portfolio.WebUI.Controllers
 
         }
         //+
-        public IActionResult Index()
+        public async Task<IActionResult> Index(IndexList query)
         {
-            return View();
+            var respons = await db.Send(query);
+            return View(respons);
         }
 
 

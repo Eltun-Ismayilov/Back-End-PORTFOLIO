@@ -1,4 +1,4 @@
-﻿
+﻿@model IndexViewModel
 @{
     ViewData["Title"] = "About";
 }
@@ -64,77 +64,23 @@
             <h5 class="tittle">Services</h5>
             <div class="row padding-20 margin-top-50">
 
-                <!-- Icon -->
-                <div class="col-md-4 text-center">
-                    <div class="icon-box i-large ib-black">
-                        <div class="ib-icon"> <i class="fa fa-whatsapp" aria-hidden="true"></i> </div>
-                        <div class="ib-info">
-                            <h4 class="h6">WEB DEVELOPMENT</h4>
-                            <p>We have created the new macbook psd version with scalable vector shapes.</p>
+                @foreach (var item in Model.Servicess)
+                {
+                    <!-- Icon -->
+                    <div class="col-md-4 text-center">
+                        <div class="icon-box i-large ib-black">
+                            <div class="ib-icon"> <i class="@item.Icons.FirstOrDefault(i=>i.ServiceId==item.Id).Icon" aria-hidden="true"></i> </div>
+                            <div class="ib-info">
+                                <h4 class="h6">@item.Title</h4>
+                                <p>@item.Description</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Icon -->
-                <div class="col-md-4 text-center">
-                    <div class="icon-box i-large ib-black">
-                        <div class="ib-icon"> <i class="fa fa-magic" aria-hidden="true"></i> </div>
-                        <div class="ib-info">
-                            <h4 class="h6">WEB DESIGN</h4>
-                            <p>We have created the new macbook psd version with scalable vector shapes.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Icon -->
-                <div class="col-md-4 text-center">
-                    <div class="icon-box i-large ib-black">
-                        <div class="ib-icon"> <i class="fa fa-smile-o" aria-hidden="true"></i> </div>
-                        <div class="ib-info">
-                            <h4 class="h6">RESPONSIVE</h4>
-                            <p>We have created the new macbook psd version with scalable vector shapes.</p>
-                        </div>
-                    </div>
-                </div>
+                }
+             
             </div>
 
-            <!-- Icon Row -->
-            <div class="row padding-20 margin-bottom-50">
-
-                <!-- Icon -->
-                <div class="col-md-4">
-                    <div class="icon-box i-large ib-black">
-                        <div class="ib-icon"> <i class="fa fa-diamond" aria-hidden="true"></i> </div>
-                        <div class="ib-info">
-                            <h4 class="h6">Unique Design</h4>
-                            <p>We have created the new macbook psd version with scalable vector shapes.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Icon -->
-                <div class="col-md-4">
-                    <div class="icon-box i-large ib-black">
-                        <div class="ib-icon"> <i class="fa fa-server" aria-hidden="true"></i> </div>
-                        <div class="ib-info">
-                            <h4 class="h6">Demos Layout</h4>
-                            <p>We have created the new macbook psd version with scalable vector shapes.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Icon -->
-                <div class="col-md-4">
-                    <div class="icon-box i-large ib-black">
-                        <div class="ib-icon"> <i class="fa fa-scissors" aria-hidden="true"></i> </div>
-                        <div class="ib-info">
-                            <h4 class="h6">Clean Code</h4>
-                            <p>We have created the new macbook psd version with scalable vector shapes.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+          
             <!-- Skills -->
             <h5 class="tittle">Skills</h5>
 
