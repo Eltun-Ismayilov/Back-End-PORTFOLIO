@@ -32,9 +32,10 @@ namespace Portfolio.WebUI
 
             }, ServiceLifetime.Scoped);
 
+            //MediarR ucun yazilmisdir.
             services.AddMediatR(this.GetType().Assembly);
 
-
+            //Mediart CreateCommand Yazilib
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
         }
 
