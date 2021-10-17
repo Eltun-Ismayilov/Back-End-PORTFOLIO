@@ -25,6 +25,7 @@ namespace Portfolio.WebUI.Appcode.Application.IndexMolus
 
                 vm.Iconss = await db.Icons.Where(b => b.CreateByUserId == null).ToListAsync(cancellationToken); // silinmemisleri getirir
                 vm.Servicess = await db.Services.Where(b => b.CreateByUserId == null).Include(i=>i.Icons).ToListAsync(cancellationToken); // silinmemisleri getirir
+                vm.Skills = await db.Skills.Where(b => b.CreateByUserId == null).ToListAsync(cancellationToken); // silinmemisleri getirir
 
                 return vm;
 
