@@ -53,8 +53,15 @@ namespace Portfolio.WebUI
 
             app.UseStaticFiles();
 
+
+                
             app.UseEndpoints(cfg =>
             {
+
+                cfg.MapControllerRoute(
+                name: "areas",
+                pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}"
+                );
 
                 cfg.MapControllerRoute("default", "{controller=Home}/{action=index}/{id?}");
 
