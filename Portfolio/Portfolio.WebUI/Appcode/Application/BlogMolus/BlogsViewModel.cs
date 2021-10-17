@@ -10,7 +10,7 @@ namespace Portfolio.WebUI.Appcode.Application.BlogMolus
     public class BlogsViewModel
     {
         [Required]
-        public int? Id { get; set; }//+
+        public int? Id { get; set; }
 
         public string Title { get; set; }
 

@@ -27,9 +27,10 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Index(BlogPagedQuery request)
         {
+            
 
             var response = await mediator.Send(request);
-
+            
             return View(response);
         }
 
@@ -105,5 +106,12 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
         }
 
 
+        [HttpPost]
+        public async Task<IActionResult> Delete(BlogsRemoveCommand requst)
+        {
+            var respons = await mediator.Send(requst);
+
+            return Json(respons);
+        }
     }
 }

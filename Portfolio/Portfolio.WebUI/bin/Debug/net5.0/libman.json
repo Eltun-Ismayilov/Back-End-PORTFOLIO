@@ -17,6 +17,10 @@
     {
       "library": "ckeditor5@30.0.0",
       "destination": "wwwroot/libs/ckeditor5/"
+    },
+    {
+      "library": "sweetalert@2.1.2",
+      "destination": "wwwroot/libs/sweetalert/"
     }
   ]
 }
