@@ -1,8 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using Portfolio.WebUI.Appcode.Application.BlogMolus;
-using Portfolio.WebUI.Model.DataContexts;
+using Portfolio.WebUI.Appcode.Application.ExperinceMolus;
 using Portfolio.WebUI.Model.Entity;
 using System;
 using System.Collections.Generic;
@@ -12,26 +11,28 @@ using System.Threading.Tasks;
 namespace Portfolio.WebUI.Areas.Admin.Controllers
 {
     [Area("Admin")]
-
-    public class BlogController : Controller
+    public class ExperienceController : Controller
     {
-       // private readonly IWebHostEnvironment env;
+
+        //private readonly IWebHostEnvironment env;
         private readonly IMediator mediator;
 
-        public BlogController( IMediator mediator)
+        public ExperienceController(IMediator mediator)
         {
+           
             this.mediator = mediator;
         }
-        public async Task<IActionResult> Index(BlogPagedQuery request)
-        {
-            
 
+        public async Task<IActionResult> Index(ExperiencePagedQuery request)
+        {
             var response = await mediator.Send(request);
-            
+
             return View(response);
         }
 
-        public async Task<IActionResult> Details(BlogSingleQuery query)
+
+
+        public async Task<IActionResult> Details(ExperienceSingleQuery query)
         {
             var respons = await mediator.Send(query);
 
@@ -43,6 +44,7 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
             return View(respons);
         }
 
+
         public IActionResult Create()
         {
             return View();
@@ -50,10 +52,10 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(BlogsCreateComman command)
+        public async Task<IActionResult> Create(ExperienceCreateComman command)
         {
 
-            BlogPost model = await mediator.Send(command);
+            Experience model = await mediator.Send(command);
 
             if (model != null)
 
@@ -63,7 +65,7 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
         }
 
 
-        public async Task<IActionResult> Edit(BlogSingleQuery query)
+        public async Task<IActionResult> Edit(ExperienceSingleQuery query)
         {
             var respons = await mediator.Send(query);
 
@@ -71,14 +73,15 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            BlogsViewModel vm = new BlogsViewModel();
+            ExperienceViewModel vm = new ExperienceViewModel();
 
             vm.Id = respons.Id;
-            vm.Title = respons.Title;
-            vm.BlogType = respons.BlogType;
-            vm.ImagePati = respons.ImagePati;
+            vm.TimeInterval = respons.TimeInterval;
+            vm.WorkName = respons.WorkName;
+            vm.WorkType = respons.WorkType;
+            vm.WorkPlace = respons.WorkPlace;
             vm.Description = respons.Description;
-            vm.ShopDescription = respons.ShopDescription;
+            vm.Logo = respons.Logo;
 
             return View(vm);
 
@@ -87,7 +90,7 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(BlogsEditCommand command)
+        public async Task<IActionResult> Edit(ExperienceEditCommand command)
         {
 
             var id = await mediator.Send(command);
@@ -104,11 +107,15 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Delete(BlogsRemoveCommand requst)
+
+        public async Task<IActionResult> Delete(ExperienceRemoveCommand requst)
         {
             var respons = await mediator.Send(requst);
 
             return Json(respons);
         }
+
+
+
     }
 }
