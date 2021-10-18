@@ -1,0 +1,49 @@
+﻿@model Education
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 style="text-align:center">ProdcutSizes Details</h1>
+
+
+
+
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">TimeInterval</span>
+    <input type="text" disabled class="form-control" aria-label="Sizing example input" value="@Model.TimeInterval" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Occoption</span>
+    <input type="text" disabled class="form-control" aria-label="Sizing example input" value="@Model.Occoption" aria-describedby="inputGroup-sizing-default">
+</div>
+
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Location</span>
+    <input type="text" disabled class="form-control" aria-label="Sizing example input" value="@Model.Location" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">LinkForDiplom</span>
+    <input type="text" disabled class="form-control" aria-label="Sizing example input" value="@Model.LinkForDiplom" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
+    <input type="text" disabled class="form-control" aria-label="Sizing example input" value="@Model.Description" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">CreateData</span>
+    <input type="text" disabled class="form-control" aria-label="Sizing example input" value="@Model.CreateData" aria-describedby="inputGroup-sizing-default">
+</div>
+
+
+
+<a class="btn btn-warning" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+<a class="btn btn-outline-dark" asp-action="Index">Back to List</a>
+
+
+
+
+
+
+
+

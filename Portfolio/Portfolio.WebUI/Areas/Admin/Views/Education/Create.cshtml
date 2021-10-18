@@ -1,0 +1,49 @@
+﻿
+@model EducationCreateCommand
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 style="text-align:center">ProductSizes Create</h1>
+
+
+
+<div class="col-6 offset-3">
+    <form method="post">
+
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">TimeInterval</span>
+            <input type="text" class="form-control" asp-for="TimeInterval" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Occoption</span>
+            <input type="text" class="form-control" asp-for="Occoption" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">CompanyName</span>
+            <input type="text" class="form-control" asp-for="CompanyName" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Location</span>
+            <input type="text" class="form-control" asp-for="Location" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div> <div class="input-group mb-3">
+                   <span class="input-group-text" id="inputGroup-sizing-default">LinkForDiplom</span>
+            <input type="text" class="form-control" asp-for="LinkForDiplom" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div> <div class="input-group mb-3">
+                   <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
+            <input type="text" class="form-control" asp-for="Description" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+
+
+        <button type="submit" class="btn btn-outline-success">
+            <i class="fas fa-plus"></i>
+
+            Creat
+        </button>
+        <a asp-action="index" class="btn btn-outline-info">Geriye qayit</a>
+
+
+    </form>
+</div>

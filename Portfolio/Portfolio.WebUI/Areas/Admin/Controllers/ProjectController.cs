@@ -15,13 +15,11 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 
     public class ProjectController : Controller
     {
-        private readonly PortfolioDbContext db;
         private readonly IWebHostEnvironment env;
         private readonly IMediator mediator;
 
-        public ProjectController(PortfolioDbContext db, IWebHostEnvironment env, IMediator mediator)
+        public ProjectController(IWebHostEnvironment env, IMediator mediator)
         {
-            this.db = db;
             this.env = env;
             this.mediator = mediator;
         }
