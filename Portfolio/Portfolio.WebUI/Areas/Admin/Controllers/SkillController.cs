@@ -63,6 +63,46 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 
 
 
+        public async Task<IActionResult> Edit(SkilSingleQuery query)
+        {
+            var respons = await mediator.Send(query);
+
+            if (respons == null)
+            {
+                return NotFound();
+            }
+            SkillViewModel vm = new SkillViewModel();
+
+            vm.Id = respons.Id;
+            vm.SkillName = respons.SkillName;
+            vm.SkillType = respons.SkillType;
+            vm.SkillPercentage = respons.SkillPercentage;
+            vm.SkillDescription = respons.SkillDescription;
+            vm.isHardSkill = respons.isHardSkill;
+
+            return View(vm);
+
+
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(SkilEditCommand command)
+        {
+
+            var id = await mediator.Send(command);
+
+            if (id > 0)
+
+                return RedirectToAction(nameof(Index));
+
+            return View(command);
+
+
+
+        }
+
+
         public async Task<IActionResult> Delete(SkilRemoveCommand requst)
         {
 
