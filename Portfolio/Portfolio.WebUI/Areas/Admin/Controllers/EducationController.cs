@@ -63,6 +63,58 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
         }
 
 
+        public async Task<IActionResult> Edit(EducationSingleQuery query)
+        {
+
+
+            var respons = await mediator.Send(query);
+
+
+            if (respons == null)
+            {
+                return NotFound();
+            }
+
+            EducationViewModel vm = new EducationViewModel();
+            vm.Id = respons.Id;
+            vm.TimeInterval = respons.TimeInterval;
+            vm.Occoption = respons.Occoption;
+            vm.CompanyName = respons.CompanyName;
+            vm.Location = respons.Location;
+            vm.LinkForDiplom = respons.LinkForDiplom;
+            vm.Description = respons.Description;
+            return View(vm);
+
+        }
+
+        
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+     
+
+        public async Task<IActionResult> Edit(EducationEditCommand command)
+        {
+
+            var id = await mediator.Send(command);
+
+            if (id > 0)
+
+                return RedirectToAction(nameof(Index));
+
+            return View(command);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(EducationRemoveCommand requst)
+        {
+
+            var respons = await mediator.Send(requst);
+
+            return Json(respons);
+        }
+
+
 
 
 

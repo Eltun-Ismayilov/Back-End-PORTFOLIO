@@ -284,3 +284,4 @@ C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net
 C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net5.0\Razor\Areas\Admin\Views\Education\Index.cshtml.g.cs
 C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net5.0\Razor\Areas\Admin\Views\Education\Details.cshtml.g.cs
 C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net5.0\Razor\Areas\Admin\Views\Education\Create.cshtml.g.cs
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net5.0\Razor\Areas\Admin\Views\Education\Edit.cshtml.g.cs

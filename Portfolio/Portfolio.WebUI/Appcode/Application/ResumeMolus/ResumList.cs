@@ -21,10 +21,10 @@ namespace Portfolio.WebUI.Appcode.Application.ResumeMolus
             {
                 ResumeViewModel vm = new ResumeViewModel();
 
-                vm.Experiencess = await db.Experiences.Where(b => b.CreateByUserId == null).ToListAsync(cancellationToken); // silinmemisleri getirir
-                vm.Educations = await db.Educations.Where(b => b.CreateByUserId == null).ToListAsync(cancellationToken); // silinmemisleri getirir
-                vm.Bios = await db.Bios.FirstOrDefaultAsync(b => b.CreateByUserId == null); // silinmemisleri getirir
-                vm.Skills = await db.Skills.Where(b => b.CreateByUserId == null).ToListAsync(cancellationToken); // silinmemisleri getirir
+                vm.Experiencess = await db.Experiences.Where(b => b.DeleteByUserId == null).ToListAsync(cancellationToken); // silinmemisleri getirir
+                vm.Educations = await db.Educations.Where(b => b.DeleteByUserId == null).ToListAsync(cancellationToken); // silinmemisleri getirir
+                vm.Bios = await db.Bios.FirstOrDefaultAsync(b => b.DeleteByUserId == null); // silinmemisleri getirir
+                vm.Skills = await db.Skills.Where(b => b.DeleteByUserId == null).ToListAsync(cancellationToken); // silinmemisleri getirir
 
                 return vm;
 
