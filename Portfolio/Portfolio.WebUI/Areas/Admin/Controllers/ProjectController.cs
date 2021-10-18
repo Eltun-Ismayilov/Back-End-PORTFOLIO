@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Portfolio.WebUI.Appcode.Application.ProjectMolus;
 using Portfolio.WebUI.Model.DataContexts;
+using Portfolio.WebUI.Model.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,24 +46,72 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
             return View(respons);
         }
 
-        //public IActionResult Create()
-        //{
-        //    return View();
-        //}
+        public IActionResult Create()
+        {
+            return View();
+        }
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Create(BlogsCreateComman command)
-        //{
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(ProjectCreateComman command)
+        {
 
-        //    BlogPost model = await mediator.Send(command);
+            Project model = await mediator.Send(command);
 
-        //    if (model != null)
+            if (model != null)
+                return RedirectToAction(nameof(Index));
 
-        //        return RedirectToAction(nameof(Index));
+            return View(command);
+        }
 
-        //    return View(command);
-        //}
+
+        public async Task<IActionResult> Edit(ProjectSingleQuery query)
+        {
+            var respons = await mediator.Send(query);
+
+            if (respons == null)
+            {
+                return NotFound();
+            }
+            ProjectViewModel vm = new ProjectViewModel();
+
+            vm.Id = respons.Id;
+            vm.ImagePath = respons.ImagePath;
+            vm.CLink = respons.CLink;
+            vm.ProjectName = respons.ProjectName;
+            vm.ProjectType = respons.ProjectType;
+            vm.Description = respons.Description;
+
+            return View(vm);
+
+
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(ProjectEditCommand command)
+        {
+
+            var id = await mediator.Send(command);
+
+            if (id > 0)
+
+                return RedirectToAction(nameof(Index));
+
+            return View(command);
+
+
+
+        }
+
+
+        public async Task<IActionResult> Delete(ProjectRemoveCommand requst)
+        {
+            var respons = await mediator.Send(requst);
+
+            return Json(respons);
+        }
+
 
     }
 }

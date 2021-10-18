@@ -13,68 +13,52 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Portfolio.WebUI.Appcode.Application.BlogMolus
+namespace Portfolio.WebUI.Appcode.Application.ProjectMolus
 {
-
-    public class BlogsCreateComman : IRequest<BlogPost>
+    public class ProjectCreateComman: IRequest<Project>
     {
-        [Required]
-        public string Title { get; set; }
-
-        public string BlogType { get; set; }
-
-        public string Body { get; set; }
-
-        public string ImagePati { get; set; }
-
+        public string ImagePath { get; set; }
+        public string CLink { get; set; }
+        public string ProjectName { get; set; }
+        public string ProjectType { get; set; }
         public string Description { get; set; }
-
-        public string ShopDescription { get; set; }
 
         public IFormFile file { get; set; }
 
-        public DateTime? PublishedDate { get; set; }
-
-
-
-        public class BlogsCreateCommanHandler : IRequestHandler<BlogsCreateComman, BlogPost>
+        public class ProjectCreateCommanHandler : IRequestHandler<ProjectCreateComman, Project>
         {
             readonly PortfolioDbContext db;
             readonly IActionContextAccessor ctx;
             readonly IWebHostEnvironment env;
-            public BlogsCreateCommanHandler(PortfolioDbContext db, IActionContextAccessor ctx, IWebHostEnvironment env) //Model.State burda yoxlamaq ucun yazilib.
+            public ProjectCreateCommanHandler(PortfolioDbContext db, IActionContextAccessor ctx, IWebHostEnvironment env) //Model.State burda yoxlamaq ucun yazilib.
             {
                 this.db = db;
                 this.ctx = ctx;
                 this.env = env;
             }
-            public async Task<BlogPost> Handle(BlogsCreateComman model, CancellationToken cancellationToken)
+            public async Task<Project> Handle(ProjectCreateComman model, CancellationToken cancellationToken)
             {
 
 
                 if (ctx.ModelStateValid())
                 {
-                    BlogPost blog = new BlogPost();
+                    Project blog = new Project();
                     string extension = Path.GetExtension(model.file.FileName);  //.jpg tapmaq ucundur. png .gng 
 
-                    blog.ImagePati = $"{Guid.NewGuid()}{extension}";//imagenin name 
+                    blog.ImagePath = $"{Guid.NewGuid()}{extension}";//imagenin name 
 
 
-                    string phsicalFileName = Path.Combine(env.ContentRootPath, "wwwroot", "uploads", "images", blog.ImagePati);
+                    string phsicalFileName = Path.Combine(env.ContentRootPath, "wwwroot", "uploads", "images", "portfolio","5", blog.ImagePath);
 
                     using (var stream = new FileStream(phsicalFileName, FileMode.Create, FileAccess.Write))
                     {
                         await model.file.CopyToAsync(stream);
                     }
 
-                    blog.PublishedDate = DateTime.Now;
-                    blog.Title = model.Title;
-                    blog.Body = model.Body;
-                    blog.BlogType = model.BlogType;
+                    blog.CLink = model.CLink;
+                    blog.ProjectName = model.ProjectName;
+                    blog.ProjectType = model.ProjectType;
                     blog.Description = model.Description;
-                    blog.ShopDescription = model.ShopDescription;
-
-
                     db.Add(blog);
                     await db.SaveChangesAsync(cancellationToken);
 
@@ -84,5 +68,6 @@ namespace Portfolio.WebUI.Appcode.Application.BlogMolus
                 return null;
             }
         }
+    
     }
 }
