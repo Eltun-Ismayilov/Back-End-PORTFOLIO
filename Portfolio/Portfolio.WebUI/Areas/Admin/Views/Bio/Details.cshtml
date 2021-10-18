@@ -1,0 +1,38 @@
+﻿
+@model Bio
+
+<h1 style="text-align:center">Bio Details</h1>
+
+
+
+<div class="form-group col-12">
+    <div class="form-group col-12">
+        <label asp-for="Content" class="control-label"></label>
+        <p class="form-control textarea">
+
+            @Model.Content?.PlainText()
+
+        </p>
+    </div>
+
+</div>
+
+
+
+
+<a class="btn btn-warning" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+
+
+
+@section addcss{
+    <style>
+        p.textarea {
+            height: unset;
+        }
+    </style>
+}
+
+
+
+
+
