@@ -1,0 +1,59 @@
+﻿@model Skill
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 style="text-align:center">ProdcutSizes Details</h1>
+
+
+
+
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">SkillName</span>
+    <input type="text" disabled class="form-control" aria-label="Sizing example input" value="@Model.SkillName" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Occoption</span>
+    <input type="text" disabled class="form-control" aria-label="Sizing example input" value="@Model.SkillType" aria-describedby="inputGroup-sizing-default">
+</div>
+
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">SkillPercentage</span>
+    <input type="text" disabled class="form-control" aria-label="Sizing example input" value="@Model.SkillPercentage" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">SkillDescription</span>
+    <input type="text" disabled class="form-control" aria-label="Sizing example input" value="@Model.SkillDescription" aria-describedby="inputGroup-sizing-default">
+</div>
+
+<div class="input-group mb-3">
+    @if (Model.isHardSkill == true)
+    {
+
+        <span class="input-group-text" id="inputGroup-sizing-default">isHardSkill</span>
+        <input type="text" disabled class="form-control" aria-label="Sizing example input" value="HARD SKILLS" aria-describedby="inputGroup-sizing-default">
+
+    }
+    else
+    {
+        <span class="input-group-text" id="inputGroup-sizing-default">isHardSkill</span>
+        <input type="text" disabled class="form-control" aria-label="Sizing example input" value="Soft SKILLS" aria-describedby="inputGroup-sizing-default">
+
+
+    }
+</div>
+
+
+
+
+<a class="btn btn-warning" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+<a class="btn btn-outline-dark" asp-action="Index">Back to List</a>
+
+
+
+
+
+
+
+
