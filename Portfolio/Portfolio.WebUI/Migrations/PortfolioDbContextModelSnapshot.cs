@@ -324,6 +324,9 @@ namespace Portfolio.WebUI.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
+                    b.Property<bool>("Activates")
+                        .HasColumnType("bit");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");

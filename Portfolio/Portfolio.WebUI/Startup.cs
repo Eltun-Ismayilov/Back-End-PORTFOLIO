@@ -2,6 +2,7 @@ using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
@@ -35,6 +36,9 @@ namespace Portfolio.WebUI
 
             });
 
+            //+//
+            // Patilarin Standart balaca herifnen yazilisi+
+            services.AddRouting(cfg => cfg.LowercaseUrls = true);
 
             // Dependency Injection Isdifade edilmesi ucun yazilmisdir+
             services.AddDbContext<PortfolioDbContext>(cfg =>
@@ -47,7 +51,7 @@ namespace Portfolio.WebUI
 
             //Membership ucun yazilib.
             services.AddIdentity<PortUser, PortRole>()
-                .AddEntityFrameworkStores<PortfolioDbContext>();
+                .AddEntityFrameworkStores<PortfolioDbContext>().AddDefaultTokenProviders();
 
             services.Configure<IdentityOptions>(cfg =>
             {
@@ -86,6 +90,9 @@ namespace Portfolio.WebUI
             services.AddAuthentication();
             services.AddAuthorization();
 
+            services.AddScoped<UserManager<PortUser>>();
+            services.AddScoped<SignInManager<PortUser>>();
+
             //MediarR ucun yazilmisdir.
             services.AddMediatR(this.GetType().Assembly);
 
@@ -103,7 +110,30 @@ namespace Portfolio.WebUI
             }
 
 
+            //Membership admin yaratmaq ucun yazilibdir...
+            // app.SeedMembership();
+
             app.UseRouting();
+
+
+            app.Use(async (context, next) =>
+            {
+                if (!context.Request.Cookies.ContainsKey("riode")
+                && context.Request.RouteValues.TryGetValue("area", out object areaName)
+                && areaName.ToString().ToLower().Equals("admin"))
+                {
+                    var attr = context.GetEndpoint().Metadata.GetMetadata<AllowAnonymousAttribute>();
+                    if (attr == null)
+                    {
+
+                        context.Response.Redirect("/admin/singin.html");
+                        await context.Response.CompleteAsync();
+
+                    }
+
+                }
+                await next();
+            });
 
             app.UseStaticFiles();
 
@@ -113,6 +143,18 @@ namespace Portfolio.WebUI
 
             app.UseEndpoints(cfg =>
             {
+
+                //+//
+                //Membersip ucun yazmisiq routda olanda myaccount/singin yox html kimi singin.html cixsin diye yaziriq;+(admin singin atsin bizi)
+                cfg.MapControllerRoute("adminsingin", "admin/singin.html",
+                  defaults: new
+                  {
+                      controller = "Account",
+                      action = "singin",
+                      area = "Admin"
+                  });
+
+
 
                 cfg.MapControllerRoute(
 
@@ -124,6 +166,9 @@ namespace Portfolio.WebUI
                         controller = "Home",
                         action = "signin"
                     });
+
+
+            
 
 
 

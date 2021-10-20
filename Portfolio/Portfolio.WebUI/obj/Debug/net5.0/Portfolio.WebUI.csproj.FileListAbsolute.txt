@@ -308,3 +308,7 @@ C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\bin\Debug\net
 C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net5.0\Razor\Views\Home\Signin.cshtml.g.cs
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net5.0\Razor\Views\Home\Register.cshtml.g.cs
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net5.0\Razor\Views\Home\SubscibeConfirm.cshtml.g.cs
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net5.0\Razor\Areas\Admin\Views\Account\Signin.cshtml.g.cs
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net5.0\Razor\Areas\Admin\Views\Account\Singin.cshtml.g.cs
