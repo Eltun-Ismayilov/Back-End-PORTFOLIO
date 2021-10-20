@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Portfolio.Application.Modules.ContactModules.ContactUser;
 using Portfolio.WebUI.Appcode.Application.IndexMolus;
@@ -11,6 +12,8 @@ using System.Threading.Tasks;
 
 namespace Portfolio.WebUI.Controllers
 {
+    [AllowAnonymous]
+
     public class HomeController : Controller
     {
 
@@ -45,6 +48,11 @@ namespace Portfolio.WebUI.Controllers
 
             var respons = await db.Send(query);
             return Json(respons);
+        }
+
+        public IActionResult Signin()
+        {
+            return View();
         }
 
     }

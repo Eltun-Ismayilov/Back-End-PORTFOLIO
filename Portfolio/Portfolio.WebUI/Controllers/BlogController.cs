@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Portfolio.WebUI.Appcode.Application.BlogMolus;
 using Portfolio.WebUI.Model.DataContexts;
@@ -20,6 +21,8 @@ namespace Portfolio.WebUI.Controllers
 
 
         }
+        [AllowAnonymous]
+
         public async Task<IActionResult> Index(BlogPagedQuery query)
         {
 
@@ -27,6 +30,8 @@ namespace Portfolio.WebUI.Controllers
 
             return View(respons);
         }
+      
+
         public async Task<IActionResult> Details(BlogSingleQuery query)
         {
 

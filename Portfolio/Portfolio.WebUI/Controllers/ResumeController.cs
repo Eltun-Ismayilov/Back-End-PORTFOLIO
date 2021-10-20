@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Portfolio.WebUI.Appcode.Application.ResumeMolus;
 using Portfolio.WebUI.Model.ViewModels;
@@ -9,6 +10,8 @@ using System.Threading.Tasks;
 
 namespace Portfolio.WebUI.Controllers
 {
+    [AllowAnonymous]
+
     public class ResumeController : Controller
     {
         readonly IMediator db;

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Portfolio.WebUI.Model.DataContexts;
 
 namespace Portfolio.WebUI.Migrations
 {
     [DbContext(typeof(PortfolioDbContext))]
-    partial class PortfolioDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211020081246_identityMembership")]
+    partial class identityMembership
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -288,7 +290,7 @@ namespace Portfolio.WebUI.Migrations
                         .HasDatabaseName("RoleNameIndex")
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
-                    b.ToTable("Roles", "Membership");
+                    b.ToTable("AspNetRoles");
                 });
 
             modelBuilder.Entity("Portfolio.WebUI.Model.Entity.Membership.PortRoleClaim", b =>
@@ -311,7 +313,7 @@ namespace Portfolio.WebUI.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("RoleClaims", "Membership");
+                    b.ToTable("AspNetRoleClaims");
                 });
 
             modelBuilder.Entity("Portfolio.WebUI.Model.Entity.Membership.PortUser", b =>
@@ -378,7 +380,7 @@ namespace Portfolio.WebUI.Migrations
                         .HasDatabaseName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
-                    b.ToTable("Users", "Membership");
+                    b.ToTable("AspNetUsers");
                 });
 
             modelBuilder.Entity("Portfolio.WebUI.Model.Entity.Membership.PortUserClaim", b =>
@@ -401,7 +403,7 @@ namespace Portfolio.WebUI.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("UserClaims", "Membership");
+                    b.ToTable("AspNetUserClaims");
                 });
 
             modelBuilder.Entity("Portfolio.WebUI.Model.Entity.Membership.PortUserLogin", b =>
@@ -422,7 +424,7 @@ namespace Portfolio.WebUI.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("UserLogins", "Membership");
+                    b.ToTable("AspNetUserLogins");
                 });
 
             modelBuilder.Entity("Portfolio.WebUI.Model.Entity.Membership.PortUserRole", b =>
@@ -437,7 +439,7 @@ namespace Portfolio.WebUI.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("UserRoles", "Membership");
+                    b.ToTable("AspNetUserRoles");
                 });
 
             modelBuilder.Entity("Portfolio.WebUI.Model.Entity.Membership.PortUserToken", b =>
@@ -456,7 +458,7 @@ namespace Portfolio.WebUI.Migrations
 
                     b.HasKey("UserId", "LoginProvider", "Name");
 
-                    b.ToTable("UserTokens", "Membership");
+                    b.ToTable("AspNetUserTokens");
                 });
 
             modelBuilder.Entity("Portfolio.WebUI.Model.Entity.PersonalDetails", b =>
