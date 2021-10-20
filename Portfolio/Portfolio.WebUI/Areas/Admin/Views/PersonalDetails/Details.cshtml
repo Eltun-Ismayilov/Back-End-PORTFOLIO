@@ -1,0 +1,82 @@
+﻿
+@model PersonalDetails
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 style="text-align:center">ProdcutSizes Details</h1>
+
+
+
+
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+    <input type="text" disabled class="form-control" aria-label="Sizing example input" value="@Model.Name" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Location</span>
+    <input type="text" disabled class="form-control" aria-label="Sizing example input" value="@Model.Location" aria-describedby="inputGroup-sizing-default">
+</div>
+
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Degree</span>
+    <input type="text" disabled class="form-control" aria-label="Sizing example input" value="@Model.Degree" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Phone</span>
+    <input type="text" disabled class="form-control" aria-label="Sizing example input" value="@Model.Phone" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Age</span>
+    <input type="text" disabled class="form-control" aria-label="Sizing example input" value="@Model.Age" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Experience</span>
+    <input type="text" disabled class="form-control" aria-label="Sizing example input" value="@Model.Experience" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">CreateByUserId</span>
+    <input type="text" disabled class="form-control" aria-label="Sizing example input" value="@Model.CreateByUserId" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Fax</span>
+    <input type="text" disabled class="form-control" aria-label="Sizing example input" value="@Model.Fax" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Website</span>
+    <input type="text" disabled class="form-control" aria-label="Sizing example input" value="@Model.Website" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Occupation</span>
+    <input type="text" disabled class="form-control" aria-label="Sizing example input" value="@Model.Occupation" aria-describedby="inputGroup-sizing-default">
+</div>
+
+<div class="form-group col-12">
+    <label asp-for="About" class="control-label"></label>
+    <p class="form-control textarea">
+
+        @Model.About?.PlainText()
+
+    </p>
+</div>
+
+
+
+<a class="btn btn-warning" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+<a class="btn btn-outline-dark" asp-action="Index">Back to List</a>
+
+
+
+
+
+@section addcss{
+    <style>
+        p.textarea {
+            height: unset;
+        }
+    </style>
+}
+
+
+

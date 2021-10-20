@@ -75,8 +75,15 @@ using Portfolio.WebUI.Appcode.Application.SkillMolus;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 17 "C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\Areas\Admin\Views\_ViewImports.cshtml"
+using Portfolio.WebUI.Appcode.Application.PersonalMolus;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"83b77f6cb733a1c63b315890c910fe163666a773", @"/Areas/Admin/Views/ContactPost/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3c6323592369613adba38e465439f32279034792", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4c3d5191e27849e01b9bb4f47fd02cd7b58a5e73", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     public class Areas_Admin_Views_ContactPost_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<Contact>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "index", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -146,7 +153,7 @@ using Portfolio.WebUI.Appcode.Application.SkillMolus;
                     <ul class=""text-left mt-2"">
           ");
             WriteLiteral("              <li>");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "83b77f6cb733a1c63b315890c910fe163666a7738412", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "83b77f6cb733a1c63b315890c910fe163666a7738656", async() => {
                 WriteLiteral("<i class=\"ti-user\"></i> <span> <span>Hamsi</span>  <span class=\"round_badge\">");
 #nullable restore
 #line 30 "C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\Areas\Admin\Views\ContactPost\Index.cshtml"
@@ -170,7 +177,7 @@ using Portfolio.WebUI.Appcode.Application.SkillMolus;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</li>\r\n                        <li>");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "83b77f6cb733a1c63b315890c910fe163666a77310062", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "83b77f6cb733a1c63b315890c910fe163666a77310306", async() => {
                 WriteLiteral("<i class=\"ti-crown\"></i> <span> <span>Cavab gozleyen</span>  <span class=\"round_badge\">");
 #nullable restore
 #line 31 "C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\Areas\Admin\Views\ContactPost\Index.cshtml"
@@ -198,7 +205,7 @@ using Portfolio.WebUI.Appcode.Application.SkillMolus;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</li>\r\n                        <li>");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "83b77f6cb733a1c63b315890c910fe163666a77312051", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "83b77f6cb733a1c63b315890c910fe163666a77312295", async() => {
                 WriteLiteral("<i class=\"ti-announcement\"></i> <span> <span>Cavablandi</span>  <span class=\"round_badge\">");
 #nullable restore
 #line 32 "C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\Areas\Admin\Views\ContactPost\Index.cshtml"
@@ -239,7 +246,7 @@ using Portfolio.WebUI.Appcode.Application.SkillMolus;
                             <div class=""serach_field_2"">
                                 <div class=""search_inner"">
                                     ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "83b77f6cb733a1c63b315890c910fe163666a77314544", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "83b77f6cb733a1c63b315890c910fe163666a77314788", async() => {
                 WriteLiteral(@"
                                         <div class=""search_field"">
                                             <input type=""text"" placeholder=""Search content here..."">
@@ -408,7 +415,7 @@ WriteAttributeValue("", 4856, item.Name, 4856, 10, false);
             WriteLiteral("\r\n");
             DefineSection("addjs", async() => {
                 WriteLiteral("\r\n\r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "83b77f6cb733a1c63b315890c910fe163666a77323392", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "83b77f6cb733a1c63b315890c910fe163666a77323636", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

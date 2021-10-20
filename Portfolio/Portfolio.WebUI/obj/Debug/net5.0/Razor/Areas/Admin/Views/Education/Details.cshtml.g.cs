@@ -75,8 +75,15 @@ using Portfolio.WebUI.Appcode.Application.SkillMolus;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 17 "C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\Areas\Admin\Views\_ViewImports.cshtml"
+using Portfolio.WebUI.Appcode.Application.PersonalMolus;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"cc559bea761195d93bc6e6ef525e67f6090e2e47", @"/Areas/Admin/Views/Education/Details.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3c6323592369613adba38e465439f32279034792", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4c3d5191e27849e01b9bb4f47fd02cd7b58a5e73", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     public class Areas_Admin_Views_Education_Details : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Education>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("btn btn-warning"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -206,7 +213,7 @@ WriteAttributeValue("", 1774, Model.CreateData, 1774, 17, false);
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(" aria-describedby=\"inputGroup-sizing-default\">\r\n</div>\r\n\r\n\r\n\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cc559bea761195d93bc6e6ef525e67f6090e2e4710645", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cc559bea761195d93bc6e6ef525e67f6090e2e4710889", async() => {
                 WriteLiteral("Edit");
             }
             );
@@ -238,7 +245,7 @@ WriteAttributeValue("", 1774, Model.CreateData, 1774, 17, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cc559bea761195d93bc6e6ef525e67f6090e2e4712915", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cc559bea761195d93bc6e6ef525e67f6090e2e4713159", async() => {
                 WriteLiteral("Back to List");
             }
             );

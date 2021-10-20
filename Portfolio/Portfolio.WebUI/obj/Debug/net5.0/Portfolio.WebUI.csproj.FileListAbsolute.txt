@@ -299,3 +299,6 @@ C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net
 C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net5.0\Razor\Areas\Admin\Views\ContactPost\Index.cshtml.g.cs
 C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net5.0\Razor\Areas\Admin\Views\ContactPost\Details.cshtml.g.cs
 C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net5.0\Razor\Areas\Admin\Views\ContactPost\Answer.cshtml.g.cs
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net5.0\Razor\Areas\Admin\Views\PersonalDetails\Index.cshtml.g.cs
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net5.0\Razor\Areas\Admin\Views\PersonalDetails\Details.cshtml.g.cs
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net5.0\Razor\Areas\Admin\Views\PersonalDetails\Edit.cshtml.g.cs
