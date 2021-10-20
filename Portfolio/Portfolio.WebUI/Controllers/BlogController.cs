@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Portfolio.WebUI.Controllers
 {
+    //test
     public class BlogController : Controller
     {
         public IActionResult Index()
