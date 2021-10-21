@@ -15,6 +15,9 @@ namespace Portfolio.WebUI.Appcode.Application.ServiceMolus
     {
         public string Title { get; set; }
         public string Description { get; set; }
+        public int IconsId { get; set; }
+        public virtual Icons Icons { get; set; }
+
 
         public class ServicesCreateCommandHandler : IRequestHandler<ServicesCreateCommand, Services>
         {
@@ -32,14 +35,15 @@ namespace Portfolio.WebUI.Appcode.Application.ServiceMolus
 
                 if (ctx.ModelStateValid())
                 {
-                    Services brands = new Services();
-                    brands.Title = model.Title;
-                    brands.Description = model.Description;
-                   
-                    db.Services.Add(brands);
+                    Services icon = new Services();
+                    icon.Title = model.Title;
+                    icon.Description = model.Description;
+                    icon.IconsId = model.IconsId;
+
+                    db.Services.Add(icon);
                     await db.SaveChangesAsync(cancellationToken);
 
-                    return brands;
+                    return icon;
                 }
 
                 return null;

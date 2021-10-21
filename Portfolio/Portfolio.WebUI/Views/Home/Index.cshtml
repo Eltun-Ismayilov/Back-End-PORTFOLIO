@@ -63,10 +63,10 @@
 
                 @foreach (var item in Model.Servicess)
                 {
-                    <!-- Icon -->
+                     
                     <div class="col-md-4 text-center">
                         <div class="icon-box i-large ib-black">
-                            <div class="ib-icon"> <i class="@item.Icons.FirstOrDefault(i=>i.ServiceId==item.Id).Icon" aria-hidden="true"></i> </div>
+                            <div class="ib-icon"> <i class="@item.Icons.Icon" aria-hidden="true"></i> </div>
                             <div class="ib-info">
                                 <h4 class="h6">@item.Title</h4>
                                 <p>@item.Description</p>

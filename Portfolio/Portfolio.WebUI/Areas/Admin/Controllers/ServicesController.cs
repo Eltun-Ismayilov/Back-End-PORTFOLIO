@@ -1,6 +1,8 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Portfolio.WebUI.Appcode.Application.ServiceMolus;
+using Portfolio.WebUI.Model.DataContexts;
 using Portfolio.WebUI.Model.Entity;
 using System;
 using System.Collections.Generic;
@@ -13,9 +15,11 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
     public class ServicesController : Controller
     {
         readonly IMediator mediator;
-        public ServicesController(IMediator mediator)
+        readonly PortfolioDbContext db;
+        public ServicesController(IMediator mediator, PortfolioDbContext db)
         {
             this.mediator = mediator;
+            this.db = db;
         }
         public async Task<IActionResult> Index(ServicesPagedQuery query)
         {
@@ -24,8 +28,26 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
         }
 
 
+        public async Task<IActionResult> Details(ServicesSingleQuery query)
+        {
+
+
+            var respons = await mediator.Send(query);
+            if (respons == null)
+            {
+                return NotFound();
+            }
+
+
+            return View(respons);
+        }
+
+
+
         public IActionResult Create()
         {
+            ViewData["IconsId"] = new SelectList(db.Icons.Where(b => b.DeleteByUserId == null), "Id", "Icon");
+
             return View();
         }
         [HttpPost]
@@ -41,9 +63,63 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 
 
 
+            ViewData["IconsId"] = new SelectList(db.Icons.Where(b => b.DeleteByUserId == null), "Id", "Icon", command.Icons);
 
             return View(command);
         }
+
+
+        public async Task<IActionResult> Delete(ServicesRemoveCommand requst)
+        {
+
+            var respons = await mediator.Send(requst);
+
+            return Json(respons);
+        }
+
+
+
+        public async Task<IActionResult> Edit(ServicesSingleQuery query)
+        {
+            var respons = await mediator.Send(query);
+
+            if (respons == null)
+            {
+                return NotFound();
+            }
+            ServicesViewModel vm = new ServicesViewModel();
+
+            vm.Id = respons.Id;
+            vm.Title = respons.Title;
+            vm.Description = respons.Description;
+            vm.IconsId = respons.IconsId;
+
+            ViewData["IconsId"] = new SelectList(db.Icons.Where(b => b.DeleteByUserId == null), "Id", "Icon");
+
+            return View(vm);
+
+
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(ServicesEditCommand command)
+        {
+
+            var id = await mediator.Send(command);
+
+            if (id > 0)
+
+                return RedirectToAction(nameof(Index));
+
+            ViewData["IconsId"] = new SelectList(db.Services, "Id", "Icon", command.IconsId);
+
+            return View(command);
+
+
+
+        }
+
 
 
     }

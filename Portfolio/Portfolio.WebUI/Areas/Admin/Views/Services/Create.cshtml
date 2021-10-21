@@ -1,11 +1,8 @@
 ﻿
 @model ServicesCreateCommand
 
-@{
-    ViewData["Title"] = "Create";
-}
 
-<h1 style="text-align:center">ProductSizes Create</h1>
+<h1 style="text-align:center">Services Create</h1>
 
 
 
@@ -21,10 +18,11 @@
             <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
             <input type="text" class="form-control" asp-for="Description" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
-            <input type="text" class="form-control" asp-for="" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <div class="form-group">
+            <label  class="control-label">Icon Name</label>
+            <select asp-for="IconsId" class="form-control"  asp-items="ViewBag.IconsId"></select>
         </div>
+       
 
         <button type="submit" class="btn btn-outline-success">
             <i class="fas fa-plus"></i>

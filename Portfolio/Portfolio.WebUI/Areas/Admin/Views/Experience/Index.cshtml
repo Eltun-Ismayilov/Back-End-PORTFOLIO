@@ -1,4 +1,4 @@
-﻿@model PagedViewModel<Education>
+﻿@model PagedViewModel<Experience>
 
 @{
     ViewData["Title"] = "Index";
@@ -9,7 +9,7 @@
 </div>
 
 <div style="display:flex">
-    <h1>Education Index</h1>
+    <h1>Experience Layout</h1>
 
 
 </div>
@@ -18,8 +18,8 @@
     <table class="table table-striped" border="1">
         <thead>
             <tr>
-                <th scope="col">Occoption</th>
-                <th scope="col">Company Name</th>
+                <th scope="col">Image</th>
+                <th scope="col">WorkName</th>
                 <th scope="col">TimeInterval</th>
                 <th>
                     <a class="btn btn-success" asp-action="Create">
@@ -38,8 +38,11 @@
             @foreach (var item in Model.Items)
             {
                 <tr>
-                    <th>@item.Occoption</th>
-                    <td>@item.CompanyName</td>
+
+                    <th>
+                        <img width="200" height="200" class="img-fluid" src="~/uploads/images/@item.Logo" />
+                    </th>
+                    <td>@item.WorkName</td>
                     <td> @item.TimeInterval</td>
                     <td>
                         <a class="btn btn-outline-warning" asp-action="Edit" asp-route-id="@item.Id">
@@ -53,7 +56,7 @@
                         </a>
 
 
-                        <a class="btn btn-outline-danger" onclick="remove(@item.Id, '@item.Occoption')">
+                        <a class="btn btn-outline-danger" onclick="remove(@item.Id, '@item.WorkName')">
                             <i class="fas fa-trash-alt"></i>
 
                             Delete

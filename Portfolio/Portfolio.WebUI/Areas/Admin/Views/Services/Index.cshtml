@@ -9,7 +9,7 @@
 </div>
 
 <div style="display:flex">
-    <h1>Education Index</h1>
+    <h1>Services Layout</h1>
 
 
 </div>
@@ -19,7 +19,7 @@
         <thead>
             <tr>
                 <th scope="col">Title</th>
-                <th scope="col">Description</th>
+                <th scope="col">Icon Name</th>
                 <th>
                     <a class="btn btn-success" asp-action="Create">
                         <i class="fas fa-plus"></i>
@@ -37,14 +37,22 @@
             @foreach (var item in Model.Items)
             {
             <tr>
-                <th>@item.Title</th>
-                <td>@item.Description</td>
-                 <td>
+                <th >@item.Title</th>
+                <td>
+                    <i style="color:red" class="@item.Icons.Icon">
+
+                    </i>
+                </td>
+                <td>
                     <a class="btn btn-outline-warning" asp-action="Edit" asp-route-id="@item.Id">
                         <i class="fas fa-pencil-alt"></i>
                         Edit
                     </a>
+                    <a class="btn btn-outline-info" asp-action="Details" asp-route-id="@item.Id">
+                        <i class="fas fa-eye"></i>
 
+                        Details
+                    </a>
 
                     <a class="btn btn-outline-danger" onclick="remove(@item.Id, '@item.Title')">
                         <i class="fas fa-trash-alt"></i>

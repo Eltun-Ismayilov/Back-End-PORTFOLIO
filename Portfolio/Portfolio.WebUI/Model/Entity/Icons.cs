@@ -8,7 +8,9 @@ namespace Portfolio.WebUI.Model.Entity
     public class Icons:BaseEntity
     {
         public string Icon { get; set; }
-        public int ServiceId { get; set; }
-        public virtual Services Service { get; set; }
+
+        public virtual ICollection<Services> Services { get; set; }
+
+
     }
 }
