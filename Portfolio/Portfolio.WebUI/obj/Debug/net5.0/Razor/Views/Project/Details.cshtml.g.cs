@@ -47,8 +47,15 @@ using Portfolio.WebUI.Model.FormModels;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 12 "C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\Views\_ViewImports.cshtml"
+using Portfolio.WebUI.Model.DataContexts;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b038647c54e37b3c3c9fbdf84c3fcf282e422878", @"/Views/Project/Details.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3dae80b14d1461dc0deff559b269cea6b0c46122", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f2d0bf801748c97165fdc388516a4b8430ac67e2", @"/Views/_ViewImports.cshtml")]
     public class Views_Project_Details : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Project>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Home", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -106,7 +113,7 @@ using Portfolio.WebUI.Model.FormModels;
             BeginWriteAttribute("class", " class=\"", 602, "\"", 610, 0);
             EndWriteAttribute();
             WriteLiteral(">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b038647c54e37b3c3c9fbdf84c3fcf282e4228787434", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b038647c54e37b3c3c9fbdf84c3fcf282e4228787651", async() => {
                 WriteLiteral("<i class=\"icon-user\"></i> ABOUT ME");
             }
             );
@@ -127,7 +134,7 @@ using Portfolio.WebUI.Model.FormModels;
             BeginWriteAttribute("class", " class=\"", 736, "\"", 744, 0);
             EndWriteAttribute();
             WriteLiteral(">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b038647c54e37b3c3c9fbdf84c3fcf282e4228789008", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b038647c54e37b3c3c9fbdf84c3fcf282e4228789225", async() => {
                 WriteLiteral("<i class=\"icon-book-open\"></i>RESUME");
             }
             );
@@ -145,7 +152,7 @@ using Portfolio.WebUI.Model.FormModels;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</li>\r\n            <li role=\"presentation\"class=\"active\">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b038647c54e37b3c3c9fbdf84c3fcf282e42287810460", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b038647c54e37b3c3c9fbdf84c3fcf282e42287810677", async() => {
                 WriteLiteral("<i class=\"icon-rocket\"></i>PORTFOLIO");
             }
             );
@@ -163,7 +170,7 @@ using Portfolio.WebUI.Model.FormModels;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</li>\r\n            <li role=\"presentation\" >");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b038647c54e37b3c3c9fbdf84c3fcf282e42287811898", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b038647c54e37b3c3c9fbdf84c3fcf282e42287812115", async() => {
                 WriteLiteral("<i class=\"icon-note\"></i>BLOG");
             }
             );
@@ -181,7 +188,7 @@ using Portfolio.WebUI.Model.FormModels;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</li>\r\n            <li role=\"presentation\">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b038647c54e37b3c3c9fbdf84c3fcf282e42287813328", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b038647c54e37b3c3c9fbdf84c3fcf282e42287813545", async() => {
                 WriteLiteral(" <i class=\"icon-pencil\"></i>CONTACT ME");
             }
             );
@@ -212,7 +219,7 @@ using Portfolio.WebUI.Model.FormModels;
     <article class=""blog-post width-100 padding-25"">
         <div class=""post-img"">
             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "b038647c54e37b3c3c9fbdf84c3fcf282e42287814993", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "b038647c54e37b3c3c9fbdf84c3fcf282e42287815210", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

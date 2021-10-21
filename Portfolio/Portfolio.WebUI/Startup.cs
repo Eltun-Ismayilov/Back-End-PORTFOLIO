@@ -67,7 +67,7 @@ namespace Portfolio.WebUI
                 //cfg.User.AllowedUserNameCharacters = ""; //User neleri isdifade eliye biler?
 
                 cfg.Lockout.MaxFailedAccessAttempts = 3;// 3 seferden cox sefh giris etse diyansin?
-                cfg.Lockout.DefaultLockoutTimeSpan = new TimeSpan(0, 5, 0);//Nece deq gozlesin ?
+                cfg.Lockout.DefaultLockoutTimeSpan = new TimeSpan(0, 2, 0);//Nece deq gozlesin ?
 
 
             });

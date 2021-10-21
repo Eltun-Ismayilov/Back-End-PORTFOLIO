@@ -47,8 +47,15 @@ using Portfolio.WebUI.Model.FormModels;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 12 "C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\Views\_ViewImports.cshtml"
+using Portfolio.WebUI.Model.DataContexts;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"24e1fc35e2070ec592dea73385fb9d10a266b92b", @"/Views/Blog/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3dae80b14d1461dc0deff559b269cea6b0c46122", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f2d0bf801748c97165fdc388516a4b8430ac67e2", @"/Views/_ViewImports.cshtml")]
     public class Views_Blog_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<PagedViewModel<BlogPost>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("img-responsive"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -111,7 +118,7 @@ using Portfolio.WebUI.Model.FormModels;
 #line hidden
 #nullable disable
             WriteLiteral("                <!-- Blog Post -->\r\n                <article>\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "24e1fc35e2070ec592dea73385fb9d10a266b92b6559", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "24e1fc35e2070ec592dea73385fb9d10a266b92b6776", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -144,7 +151,7 @@ AddHtmlAttributeValue("", 551, item.ImagePati, 551, 15, false);
 #line hidden
 #nullable disable
             WriteLiteral("</span> <span class=\"margin-left-15\"><i class=\"icon-user\"></i>Admin</span> <span class=\"margin-left-15\"><i class=\"icon-bubbles\"></i> Featured</span></div>\r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "24e1fc35e2070ec592dea73385fb9d10a266b92b8912", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "24e1fc35e2070ec592dea73385fb9d10a266b92b9129", async() => {
                 WriteLiteral(" ");
 #nullable restore
 #line 25 "C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\Views\Blog\Index.cshtml"
@@ -192,7 +199,7 @@ AddHtmlAttributeValue("", 551, item.ImagePati, 551, 15, false);
 #line hidden
 #nullable disable
             WriteLiteral("</p>\r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "24e1fc35e2070ec592dea73385fb9d10a266b92b11807", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "24e1fc35e2070ec592dea73385fb9d10a266b92b12024", async() => {
                 WriteLiteral("Read MOre <i class=\"fa fa-angle-right\" aria-hidden=\"true\"></i>");
             }
             );

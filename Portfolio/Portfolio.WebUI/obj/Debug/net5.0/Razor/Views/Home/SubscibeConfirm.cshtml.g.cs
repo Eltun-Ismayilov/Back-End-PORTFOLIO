@@ -47,8 +47,15 @@ using Portfolio.WebUI.Model.FormModels;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 12 "C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\Views\_ViewImports.cshtml"
+using Portfolio.WebUI.Model.DataContexts;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8ece4d401f72f9f983179e2cf3e40ea24f6bf705", @"/Views/Home/SubscibeConfirm.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3dae80b14d1461dc0deff559b269cea6b0c46122", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f2d0bf801748c97165fdc388516a4b8430ac67e2", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_SubscibeConfirm : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

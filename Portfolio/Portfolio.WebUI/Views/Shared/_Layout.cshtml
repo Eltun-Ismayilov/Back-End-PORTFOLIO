@@ -1,4 +1,8 @@
-﻿
+﻿@inject PortfolioDbContext db
+
+@{ 
+    var person = db.PersonalDetailss.FirstOrDefault(p => p.DeleteByUserId == null);
+}
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -117,36 +121,36 @@
                                     <ul class="personal-info">
                                         <li>
                                             <p>
-                                                <span> Name</span> Eltun Ismayilov
+                                                <span> Name</span> @person.Name
 
                                             </p>
                                         </li>
                                         <li>
-                                            <p> <span> Age</span> 21 years </p>
+                                            <p> <span> Age</span> @person.Age </p>
                                         </li>
                                         <li>
-                                            <p> <span> Location</span> Baku, Azerbaycan </p>
+                                            <p> <span> Location</span> @person.Location </p>
                                         </li>
                                         <li>
-                                            <p> <span> Experience</span> 5 Years </p>
+                                            <p> <span> Experience</span> @person.Experience </p>
                                         </li>
                                         <li>
-                                            <p> <span> Degree</span> MBA </p>
+                                            <p> <span> Degree</span> @person.Degree </p>
                                         </li>
                                         <li>
-                                            <p> <span> Career Level</span> Mid-Level </p>
+                                            <p> <span> Career Level</span> @person.CareerLevel </p>
                                         </li>
                                         <li>
-                                            <p> <span> Phone</span> 077-566-31-61 </p>
+                                            <p> <span> Phone</span> @person.Phone</p>
                                         </li>
                                         <li>
-                                            <p> <span> FAX</span> (800) 123-4568 </p>
+                                            <p> <span> FAX</span> @person.Fax </p>
                                         </li>
                                         <li>
-                                            <p> <span> E-mail</span> <a href="#."> eltunhi@code.edu.az</a> </p>
+                                            <p> <span> E-mail</span> <a href="#.">@person.Email</a> </p>
                                         </li>
                                         <li>
-                                            <p> <span> Website</span><a href="#."> Eltun.com </a></p>
+                                            <p> <span> Website</span><a href="#."> @person.Website </a></p>
                                         </li>
                                     </ul>
 

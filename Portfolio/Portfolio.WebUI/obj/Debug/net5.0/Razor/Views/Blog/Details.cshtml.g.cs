@@ -47,8 +47,15 @@ using Portfolio.WebUI.Model.FormModels;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 12 "C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\Views\_ViewImports.cshtml"
+using Portfolio.WebUI.Model.DataContexts;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"08af161c0d74ccf684df753c4cd6bf1f01d753b3", @"/Views/Blog/Details.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3dae80b14d1461dc0deff559b269cea6b0c46122", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f2d0bf801748c97165fdc388516a4b8430ac67e2", @"/Views/_ViewImports.cshtml")]
     public class Views_Blog_Details : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<BlogPost>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("alt", new global::Microsoft.AspNetCore.Html.HtmlString(""), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -101,7 +108,7 @@ using Portfolio.WebUI.Model.FormModels;
         <article class=""blog-post width-100 padding-25"">
             <div class=""post-img"">
                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "08af161c0d74ccf684df753c4cd6bf1f01d753b35679", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "08af161c0d74ccf684df753c4cd6bf1f01d753b35896", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -182,7 +189,7 @@ AddHtmlAttributeValue("", 348, Model.ImagePati, 348, 16, false);
                         <div class=""media"">
                             <div class=""media-left"">
                                 <div class=""avatar"">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "08af161c0d74ccf684df753c4cd6bf1f01d753b39689", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "08af161c0d74ccf684df753c4cd6bf1f01d753b39906", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -215,7 +222,7 @@ AddHtmlAttributeValue("", 348, Model.ImagePati, 348, 16, false);
                     <li class=""com-reply"">
                         <div cla");
             WriteLiteral("ss=\"media\">\r\n                            <div class=\"media-left\">\r\n                                <div class=\"avatar\">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "08af161c0d74ccf684df753c4cd6bf1f01d753b312002", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "08af161c0d74ccf684df753c4cd6bf1f01d753b312219", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -254,7 +261,7 @@ AddHtmlAttributeValue("", 348, Model.ImagePati, 348, 16, false);
                         <h4>Post to Reply</h4>
                     </div>
                     ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "08af161c0d74ccf684df753c4cd6bf1f01d753b314512", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "08af161c0d74ccf684df753c4cd6bf1f01d753b314729", async() => {
                 WriteLiteral("\r\n                        <ul class=\"row\">\r\n                            <li class=\"col-sm-4\">\r\n                                <label>\r\n                                    *NAME\r\n                                    <input class=\"form-control\" type=\"text\"");
                 BeginWriteAttribute("placeholder", " placeholder=\"", 5092, "\"", 5106, 0);
                 EndWriteAttribute();
