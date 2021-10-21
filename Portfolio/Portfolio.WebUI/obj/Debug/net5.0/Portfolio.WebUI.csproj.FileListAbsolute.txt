@@ -312,3 +312,8 @@ C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net
 C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net5.0\Razor\Views\Home\SubscibeConfirm.cshtml.g.cs
 C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net5.0\Razor\Areas\Admin\Views\Account\Signin.cshtml.g.cs
 C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net5.0\Razor\Areas\Admin\Views\Account\Singin.cshtml.g.cs
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net5.0\Razor\Areas\Admin\Views\Icons\Index.cshtml.g.cs
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net5.0\Razor\Areas\Admin\Views\Icons\Edit.cshtml.g.cs
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net5.0\Razor\Areas\Admin\Views\Icons\Create.cshtml.g.cs
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net5.0\Razor\Areas\Admin\Views\Services\Index.cshtml.g.cs
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.WebUI\obj\Debug\net5.0\Razor\Areas\Admin\Views\Services\Create.cshtml.g.cs

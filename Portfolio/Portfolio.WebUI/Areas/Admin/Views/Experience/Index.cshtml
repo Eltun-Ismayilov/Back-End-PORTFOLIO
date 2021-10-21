@@ -1,58 +1,70 @@
-﻿
-@model PagedViewModel<Experience>
+﻿@model PagedViewModel<Education>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-
-
-
-
-<h1 style="text-align:center">Extension Index</h1>
 <div>
     @Model.GetPagenation(Url, "index", "Admin")
 </div>
-<table class="table table-striped" border="1">
-    <thead>
-        <tr>
 
-            <th scope="col">Image</th>
-            <th scope="col">TimeInterval</th>
-            <th scope="col">WorkType</th>
-            <th>
-
-                <a class="btn btn-success" asp-action="Create">Create New</a>
-
-                <a class="btn btn-warning">Extension Count: @Model.Items.Count()</a>
+<div style="display:flex">
+    <h1>Education Index</h1>
 
 
-            </th>
-
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.Items)
-        {
+</div>
+<a style="margin-left:15px" class="btn btn-warning">Education Count:@Model.Items.Count()</a>
+<div class="col-10">
+    <table class="table table-striped" border="1">
+        <thead>
             <tr>
+                <th scope="col">Occoption</th>
+                <th scope="col">Company Name</th>
+                <th scope="col">TimeInterval</th>
                 <th>
-                    <img width="50" height="50" class="img-fluid" src="~/uploads/images/@item.Logo" />
+                    <a class="btn btn-success" asp-action="Create">
+                        <i class="fas fa-plus"></i>
+                        Create New
+                    </a>
+
+
+
+
                 </th>
-                <td>@item.TimeInterval</td>
-                <td>@item.WorkType</td>
-                <td>
-                    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
-                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
-
-
-                    <a class="btn btn-danger" onclick="remove(@item.Id, '@item.WorkType')">Delete</a>
-                </td>
 
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                <tr>
+                    <th>@item.Occoption</th>
+                    <td>@item.CompanyName</td>
+                    <td> @item.TimeInterval</td>
+                    <td>
+                        <a class="btn btn-outline-warning" asp-action="Edit" asp-route-id="@item.Id">
+                            <i class="fas fa-pencil-alt"></i>
+                            Edit
+                        </a>
+                        <a class="btn btn-outline-info" asp-action="Details" asp-route-id="@item.Id">
+                            <i class="fas fa-eye"></i>
 
+                            Details
+                        </a>
+
+
+                        <a class="btn btn-outline-danger" onclick="remove(@item.Id, '@item.Occoption')">
+                            <i class="fas fa-trash-alt"></i>
+
+                            Delete
+                        </a>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 
 
 @section addjs{
