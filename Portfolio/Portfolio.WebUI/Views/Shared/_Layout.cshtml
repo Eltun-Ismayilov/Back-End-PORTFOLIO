@@ -1,6 +1,6 @@
 ﻿@inject PortfolioDbContext db
 
-@{ 
+@{
     var person = db.PersonalDetailss.FirstOrDefault(p => p.DeleteByUserId == null);
 }
 <!doctype html>
@@ -45,10 +45,31 @@
         <nav id="cd-lateral-nav">
             <h5 class="tittle">MotiCv</h5>
             <ul class="cd-navigation">
+
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li>
+                        <a asp-controller="Home" asp-action="Index">
+                            Isdifadeci Adi: @User.Identity.Name
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="Home" asp-action="Logout" asp-area="">
+                            Logout
+                        </a>
+                    </li>
+
+
+                }
                 <li><a asp-controller="Home" asp-action="Index">About Me</a></li>
                 <li><a asp-controller="Project" asp-action="index">Portfolio</a></li>
                 <li><a asp-controller="blog" asp-action="index">Blog</a></li>
                 <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+
+
+
+
+
 
             </ul>
             <h5 class="tittle">Latest Post</h5>
@@ -101,8 +122,8 @@
                         <div class="top-head">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <h4>Resume </h4>
-                                    <a href="resume(edit-mode).html">Edit Resume</a>
+
+                                    <a href="resume(edit-mode).html">Salam gags</a>
                                 </div>
                                 <div class="col-sm-6"> <a id="cd-menu-trigger" href="#0"><span class="cd-menu-icon"></span></a> </div>
                             </div>
@@ -223,7 +244,7 @@
                                             <li role="presentation" class=""><a asp-controller="Home" asp-action="index"><i class="icon-user"></i> ABOUT ME</a></li>
                                             <li role="presentation" class=""><a asp-controller="Resume" asp-action="index"><i class="icon-book-open"></i>RESUME</a></li>
                                             <li role="presentation" class=""><a asp-controller="Project" asp-action="Index"><i class="icon-rocket"></i>PORTFOLIO</a></li>
-                                            <li role="presentation" ><a asp-controller="Blog" asp-action="Index"><i class="icon-note"></i>BLOG</a></li>
+                                            <li role="presentation"><a asp-controller="Blog" asp-action="Index"><i class="icon-note"></i>BLOG</a></li>
                                             <li role="presentation"><a asp-controller="Home" asp-action="Contact"> <i class="icon-pencil"></i>CONTACT ME</a></li>
                                         </ul>
                                     </div>
@@ -246,7 +267,6 @@
         </div>
     </footer>
     <!-- End Footer -->
- 
     <!-- End Page Wrapper -->
 
     <script src="https://kit.fontawesome.com/1154e1d6ee.js" crossorigin="anonymous"></script>

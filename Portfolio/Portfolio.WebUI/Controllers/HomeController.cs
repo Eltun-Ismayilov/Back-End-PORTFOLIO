@@ -287,7 +287,7 @@ namespace Portfolio.WebUI.Controllers
 
                 await userManager.AddToRoleAsync(user, "User");
 
-                return RedirectToAction("index", "Home");
+                return RedirectToAction("Signin", "Home");
 
             }
 
@@ -337,6 +337,16 @@ namespace Portfolio.WebUI.Controllers
             }
             end:
             return View();
+        }
+
+
+
+        public async Task<IActionResult> Logout()
+        {
+
+            await signInManager.SignOutAsync();
+            return RedirectToAction(nameof(Signin));
+
         }
     }
     

@@ -167,12 +167,6 @@ namespace Portfolio.WebUI
                         action = "signin"
                     });
 
-
-            
-
-
-
-
                 cfg.MapControllerRoute(
                 name: "areas",
                 pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}"
