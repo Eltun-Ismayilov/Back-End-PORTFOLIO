@@ -1,12 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Portfolio.WebUI.Appcode.Extension;
-using Portfolio.WebUI.Model.DataContexts;
-using Portfolio.WebUI.Model.Entity.Membership;
-using Portfolio.WebUI.Model.FormModels;
+using Portfolio.Applications.Appcode.Extension;
+using Portfolio.Domain.Model.DataContexts;
+using Portfolio.Domain.Model.Entity.Membership;
+using Portfolio.Domain.Model.FormModels;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 

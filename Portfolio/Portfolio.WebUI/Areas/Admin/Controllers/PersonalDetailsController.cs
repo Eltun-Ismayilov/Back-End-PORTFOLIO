@@ -1,10 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Portfolio.WebUI.Appcode.Application.PersonalMolus;
-using Portfolio.WebUI.Model.DataContexts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Portfolio.Applications.PersonalMolus;
 using System.Threading.Tasks;
 
 namespace Portfolio.WebUI.Areas.Admin.Controllers

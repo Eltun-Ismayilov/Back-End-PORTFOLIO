@@ -1,11 +1,7 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using Portfolio.WebUI.Appcode.Application.ExperinceMolus;
-using Portfolio.WebUI.Model.Entity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Portfolio.Applications.ExperinceMolus;
+using Portfolio.Domain.Model.Entity;
 using System.Threading.Tasks;
 
 namespace Portfolio.WebUI.Areas.Admin.Controllers

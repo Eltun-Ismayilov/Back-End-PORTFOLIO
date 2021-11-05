@@ -1,12 +1,8 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using Portfolio.WebUI.Appcode.Application.BlogMolus;
-using Portfolio.WebUI.Model.DataContexts;
-using Portfolio.WebUI.Model.Entity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Portfolio.Applications.BlogMolus;
+using Portfolio.Applicationss.BlogMolus;
+using Portfolio.Domain.Model.Entity;
 using System.Threading.Tasks;
 
 namespace Portfolio.WebUI.Areas.Admin.Controllers

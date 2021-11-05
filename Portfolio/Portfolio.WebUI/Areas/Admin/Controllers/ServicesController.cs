@@ -1,11 +1,9 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Portfolio.WebUI.Appcode.Application.ServiceMolus;
-using Portfolio.WebUI.Model.DataContexts;
-using Portfolio.WebUI.Model.Entity;
-using System;
-using System.Collections.Generic;
+using Portfolio.Applications.ServiceMolus;
+using Portfolio.Domain.Model.DataContexts;
+using Portfolio.Domain.Model.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 

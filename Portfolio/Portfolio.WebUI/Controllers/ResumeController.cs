@@ -1,12 +1,9 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Portfolio.WebUI.Appcode.Application.ResumeMolus;
-using Portfolio.WebUI.Model.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Portfolio.Applications.ResumeMolus;
 using System.Threading.Tasks;
+
 
 namespace Portfolio.WebUI.Controllers
 {

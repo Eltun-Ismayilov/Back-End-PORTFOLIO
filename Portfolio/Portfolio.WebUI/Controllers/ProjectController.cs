@@ -1,11 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Portfolio.WebUI.Appcode.Application.ProjectMolus;
-using Portfolio.WebUI.Model.DataContexts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Portfolio.Applications.ProjectMolus;
 using System.Threading.Tasks;
 
 namespace Portfolio.WebUI.Controllers

@@ -10,9 +10,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Portfolio.WebUI.Model.DataContexts;
-using Portfolio.WebUI.Model.Entity.Membership;
+using Portfolio.Domain.Model.DataContexts;
+using Portfolio.Domain.Model.Entity.Membership;
 using System;
+using System.Linq;
 
 namespace Portfolio.WebUI
 {
@@ -92,10 +93,12 @@ namespace Portfolio.WebUI
 
             services.AddScoped<UserManager<PortUser>>();
             services.AddScoped<SignInManager<PortUser>>();
-
+                
             //MediarR ucun yazilmisdir.
-            services.AddMediatR(this.GetType().Assembly);
-
+           // services.AddMediatR(this.GetType().Assembly);
+           //Proyect hisselere bolurukse bu cur yazilmalidir.
+           var assemply = AppDomain.CurrentDomain.GetAssemblies().Where(p => p.FullName.StartsWith("Portfolio.")).ToArray();
+            services.AddMediatR(assemply);
             //Mediart CreateCommand Yazilib
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
         }
@@ -110,7 +113,6 @@ namespace Portfolio.WebUI
             }
 
 
-            //Membership admin yaratmaq ucun yazilibdir...
             // app.SeedMembership();
 
             app.UseRouting();
@@ -144,8 +146,7 @@ namespace Portfolio.WebUI
             app.UseEndpoints(cfg =>
             {
 
-                //+//
-                //Membersip ucun yazmisiq routda olanda myaccount/singin yox html kimi singin.html cixsin diye yaziriq;+(admin singin atsin bizi)
+
                 cfg.MapControllerRoute("adminsingin", "admin/singin.html",
                   defaults: new
                   {
@@ -171,6 +172,7 @@ namespace Portfolio.WebUI
                 name: "areas",
                 pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}"
                 );
+
 
                 cfg.MapControllerRoute("default", "{controller=Home}/{action=index}/{id?}");
 

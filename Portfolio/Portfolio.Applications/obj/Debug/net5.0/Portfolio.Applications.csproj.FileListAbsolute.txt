@@ -1,0 +1,15 @@
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.Applications\bin\Debug\net5.0\Portfolio.Applications.deps.json
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.Applications\bin\Debug\net5.0\Portfolio.Applications.dll
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.Applications\bin\Debug\net5.0\ref\Portfolio.Applications.dll
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.Applications\bin\Debug\net5.0\Portfolio.Applications.pdb
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.Applications\bin\Debug\net5.0\Portfolio.Domain.dll
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.Applications\bin\Debug\net5.0\Portfolio.Domain.pdb
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.Applications\obj\Debug\net5.0\Portfolio.Applications.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.Applications\obj\Debug\net5.0\Portfolio.Applications.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.Applications\obj\Debug\net5.0\Portfolio.Applications.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.Applications\obj\Debug\net5.0\Portfolio.Applications.AssemblyInfo.cs
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.Applications\obj\Debug\net5.0\Portfolio.Applications.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.Applications\obj\Debug\net5.0\Portfolio.Applications.csproj.CopyComplete
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.Applications\obj\Debug\net5.0\Portfolio.Applications.dll
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.Applications\obj\Debug\net5.0\ref\Portfolio.Applications.dll
+C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.Applications\obj\Debug\net5.0\Portfolio.Applications.pdb
