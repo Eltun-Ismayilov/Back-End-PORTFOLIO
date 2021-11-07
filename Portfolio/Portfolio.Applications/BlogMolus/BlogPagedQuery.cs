@@ -10,8 +10,59 @@ namespace Portfolio.Applications.BlogMolus
 {
     public class BlogPagedQuery : IRequest<PagedViewModel<BlogPost>>
     {
-        public int pageIndex { get; set; } = 1;
-        public int pageSize { get; set; } = 3;
+        //public int pageSize { get; set; } = 3;
+
+        int pageIndex;
+        int pageSize;
+
+        public int PageIndex {
+
+            get
+            {
+                if (pageIndex >0)
+                {
+                    return pageIndex;
+                }
+                return 1;
+            }
+            set
+            {
+                if (value>0)
+                {
+                    pageIndex = value;
+                }
+                else
+                {
+                    pageIndex = 1;
+                }
+            }
+        }
+
+
+        public int PageSize
+        {
+
+            get
+            {
+                if (pageSize > 0)
+                {
+                    return pageSize;
+                }
+                return 15;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    pageSize = value;
+                }
+                else
+                {
+                    pageIndex = 15;
+                }
+            }
+        }
+
 
         public class BlogPagedQueryHandler : IRequestHandler<BlogPagedQuery, PagedViewModel<BlogPost>>
         {
@@ -30,7 +81,7 @@ namespace Portfolio.Applications.BlogMolus
                 //    .Take(model.PageCount) // nece denesini gosdersin.
                 //    .ToListAsync(cancellationToken);
 
-                return new PagedViewModel<BlogPost>(query, model.pageIndex, model.pageSize);
+                return new PagedViewModel<BlogPost>(query, model.pageIndex=1, model.pageSize=100);
             }
         }
     }

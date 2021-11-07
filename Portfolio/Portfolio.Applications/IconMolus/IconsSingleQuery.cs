@@ -33,7 +33,7 @@ namespace Portfolio.Applications.IconMolus
                     return null;
                 }
                 var blog = await db.Icons
-                   .FirstOrDefaultAsync(m => m.Id == model.Id, cancellationToken);
+                   .FirstOrDefaultAsync(m => m.Id == model.Id && m.DeleteByUserId==null, cancellationToken);
 
                 return blog;
             }

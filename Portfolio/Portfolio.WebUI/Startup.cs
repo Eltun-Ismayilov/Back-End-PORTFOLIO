@@ -93,11 +93,11 @@ namespace Portfolio.WebUI
 
             services.AddScoped<UserManager<PortUser>>();
             services.AddScoped<SignInManager<PortUser>>();
-                
+
             //MediarR ucun yazilmisdir.
-           // services.AddMediatR(this.GetType().Assembly);
-           //Proyect hisselere bolurukse bu cur yazilmalidir.
-           var assemply = AppDomain.CurrentDomain.GetAssemblies().Where(p => p.FullName.StartsWith("Portfolio.")).ToArray();
+            // services.AddMediatR(this.GetType().Assembly);
+            //Proyect hisselere bolurukse bu cur yazilmalidir.
+            var assemply = AppDomain.CurrentDomain.GetAssemblies().Where(p => p.FullName.StartsWith("Portfolio.")).ToArray();
             services.AddMediatR(assemply);
             //Mediart CreateCommand Yazilib
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();

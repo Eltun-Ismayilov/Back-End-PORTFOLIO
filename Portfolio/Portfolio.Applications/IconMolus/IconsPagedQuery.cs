@@ -13,8 +13,58 @@ namespace Portfolio.Applications.IconMolus
 {
     public class IconsPagedQuery : IRequest<PagedViewModel<Icons>>
     {
-        public int pageIndex { get; set; } = 1;
-        public int pageSize { get; set; } = 3;
+
+        int pageIndex;
+        int pageSize;
+
+        public int PageIndex
+        {
+
+            get
+            {
+                if (pageIndex > 0)
+                {
+                    return pageIndex;
+                }
+                return 1;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    pageIndex = value;
+                }
+                else
+                {
+                    pageIndex = 1;
+                }
+            }
+        }
+
+
+        public int PageSize
+        {
+
+            get
+            {
+                if (pageSize > 0)
+                {
+                    return pageSize;
+                }
+                return 15;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    pageSize = value;
+                }
+                else
+                {
+                    pageIndex = 15;
+                }
+            }
+        }
 
         public class IconsPagedQueryHandler : IRequestHandler<IconsPagedQuery, PagedViewModel<Icons>>
         {
@@ -25,7 +75,7 @@ namespace Portfolio.Applications.IconMolus
             }
             public async Task<PagedViewModel<Icons>> Handle(IconsPagedQuery model, CancellationToken cancellationToken)
             {
-                var query = db.Icons.Where(b => b.CreateByUserId == null && b.DeleteByUserId == null).AsQueryable(); // silinmemisleri getirir
+                var query = db.Icons.Where(b => b.CreateByUserId == null && b.DeleteData == null).AsQueryable(); // silinmemisleri getirir
 
                 //int queryCount = await query.CountAsync(cancellationToken); // silinmemislerin sayni takir
 
@@ -33,7 +83,7 @@ namespace Portfolio.Applications.IconMolus
                 //    .Take(model.PageCount) // nece denesini gosdersin.
                 //    .ToListAsync(cancellationToken);
 
-                return new PagedViewModel<Icons>(query, model.pageIndex, model.pageSize);
+                return new PagedViewModel<Icons>(query, model.pageIndex=1, model.pageSize=20);
             }
         }
 
