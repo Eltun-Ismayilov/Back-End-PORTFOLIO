@@ -98,7 +98,6 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 
         }
 
-
         [HttpPost]
         public async Task<IActionResult> Delete(BlogsRemoveCommand requst)
         {

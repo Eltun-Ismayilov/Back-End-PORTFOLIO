@@ -294,6 +294,24 @@ namespace Portfolio.Domain.Migrations
                     b.ToTable("Icons");
                 });
 
+            modelBuilder.Entity("Portfolio.Domain.Model.Entity.JWT.User", b =>
+                {
+                    b.Property<int>("UserId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Password")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Username")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserId");
+
+                    b.ToTable("User");
+                });
+
             modelBuilder.Entity("Portfolio.Domain.Model.Entity.Membership.PortRole", b =>
                 {
                     b.Property<int>("Id")
@@ -674,7 +692,7 @@ namespace Portfolio.Domain.Migrations
             modelBuilder.Entity("Portfolio.Domain.Model.Entity.BlogPostComment", b =>
                 {
                     b.HasOne("Portfolio.Domain.Model.Entity.BlogPost", "BlogPost")
-                        .WithMany()
+                        .WithMany("Comments")
                         .HasForeignKey("BlogPostId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -748,6 +766,11 @@ namespace Portfolio.Domain.Migrations
                         .IsRequired();
 
                     b.Navigation("Icons");
+                });
+
+            modelBuilder.Entity("Portfolio.Domain.Model.Entity.BlogPost", b =>
+                {
+                    b.Navigation("Comments");
                 });
 
             modelBuilder.Entity("Portfolio.Domain.Model.Entity.BlogPostComment", b =>

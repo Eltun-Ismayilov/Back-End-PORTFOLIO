@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Portfolio.Applications.BlogMolus;
@@ -13,6 +14,7 @@ namespace Portfolio.WebApi.Controller
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class IconsController : ControllerBase
     {
 
@@ -56,6 +58,8 @@ namespace Portfolio.WebApi.Controller
             var respons = await mediator.Send(comman);
             return Ok(respons);
         }
+
+
 
         [HttpPut]
         [SwaggerOperation(Summary = "Icon update etmek",

@@ -28,6 +28,7 @@ namespace Portfolio.Applications.Modules.ContactModules.ContactUser
             public async Task<CommandJsonRespons> Handle(ContactCreateCommand request, CancellationToken cancellationToken)
             {
                 var response = new CommandJsonRespons();
+
                 if (ctx.ModelStateValid())
                 {
                     var contact = new Contact();

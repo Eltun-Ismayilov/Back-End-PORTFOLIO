@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Portfolio.Domain.Model.Entity;
+using Portfolio.Domain.Model.Entity.JWT;
 using Portfolio.Domain.Model.Entity.Membership;
 using System;
 using System.Collections.Generic;
@@ -28,7 +29,9 @@ namespace Portfolio.Domain.Model.DataContexts
         public DbSet<Services> Services { get; set; }
         public DbSet<PersonalDetails> PersonalDetailss { get; set; }
         public DbSet<BlogPostComment> BlogPostComments { get; set; }
+        public virtual DbSet<User> User { get; set; }
         
+
 
 
         // Database olan membershiplerin ADi qabaginda ASP isdemirikse gorsensin ozmuz duz qos eliyib burda yaziriq

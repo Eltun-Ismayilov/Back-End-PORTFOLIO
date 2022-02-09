@@ -12,4 +12,3 @@ C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.Domain\obj\Debug\ne
 C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.Domain\obj\Debug\net5.0\ref\Portfolio.Domain.dll
 C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.Domain\obj\Debug\net5.0\Portfolio.Domain.pdb
 C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.Domain\obj\Debug\net5.0\Portfolio.Domain.genruntimeconfig.cache
-C:\Users\User\Desktop\Back-End-PORTFOLIO\Portfolio\Portfolio.Domain\obj\Debug\net5.0\Portfolio.Domain.csprojAssemblyReference.cache

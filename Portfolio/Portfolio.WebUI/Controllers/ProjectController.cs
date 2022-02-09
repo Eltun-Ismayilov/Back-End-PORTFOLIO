@@ -17,7 +17,7 @@ namespace Portfolio.WebUI.Controllers
         {
             this.db = db;
 
-
+            
         }
         public async Task<IActionResult> Index(ProjectPagedQuery query)
         {

@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portfolio.Domain", "Portfol
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portfolio.Applications", "Portfolio.Applications\Portfolio.Applications.csproj", "{E1DD9ABA-B884-49B8-9954-55EBB3BF70D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portfolio.WebApi", "Portfolio.WebApi\Portfolio.WebApi.csproj", "{D39CD1A7-7D08-4D24-A830-2E2BCE7D5B53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portfolio.WebApi", "Portfolio.WebApi\Portfolio.WebApi.csproj", "{D39CD1A7-7D08-4D24-A830-2E2BCE7D5B53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

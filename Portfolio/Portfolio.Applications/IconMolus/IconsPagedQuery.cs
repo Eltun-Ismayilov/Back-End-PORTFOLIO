@@ -75,7 +75,7 @@ namespace Portfolio.Applications.IconMolus
             }
             public async Task<PagedViewModel<Icons>> Handle(IconsPagedQuery model, CancellationToken cancellationToken)
             {
-                var query = db.Icons.Where(b => b.CreateByUserId == null && b.DeleteData == null).AsQueryable(); // silinmemisleri getirir
+                var query = db.Icons.Include(x=>x.Services).Where(b => b.CreateByUserId == null && b.DeleteData == null).AsQueryable(); // silinmemisleri getirir
 
                 //int queryCount = await query.CountAsync(cancellationToken); // silinmemislerin sayni takir
 

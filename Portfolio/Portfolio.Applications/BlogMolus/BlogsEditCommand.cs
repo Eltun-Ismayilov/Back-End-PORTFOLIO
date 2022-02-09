@@ -55,7 +55,6 @@ namespace Portfolio.Applications.BlogMolus
                 {
                     entity.Title = request.Title;
                     entity.BlogType = request.BlogType;
-                    entity.ImagePati = request.ImagePati;
                     entity.Description = request.Description;
                     entity.ShopDescription = request.ShopDescription;
 
