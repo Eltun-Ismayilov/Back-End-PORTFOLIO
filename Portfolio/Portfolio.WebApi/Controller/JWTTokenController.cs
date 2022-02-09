@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Portfolio.Domain.Model.DataContexts;
 using Portfolio.Domain.Model.Entity.JWT;
+using Portfolio.Domain.Model.FormModels;
 using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
@@ -28,9 +29,12 @@ namespace Portfolio.WebApi.Controller
         }
 
         [HttpPost]
-
-        public async Task<IActionResult> GenerateToken(User user)
+        public async Task<IActionResult> GenerateToken(UserDto claim)
         {
+             User user = new User();
+             user.Username= claim.Username;
+             user.Password= claim.Password;
+
             if (user != null && user.Username != null && user.Password != null)
             {
                 var userdata = await GetUserInfo(user.Username, user.Password);
@@ -73,7 +77,7 @@ namespace Portfolio.WebApi.Controller
         }
 
         [HttpGet]
-        public async Task<User> GetUserInfo(string username,string password)
+        public virtual async Task<User> GetUserInfo(string username,string password)
         {
             return await db.User.FirstOrDefaultAsync(x => x.Username == username && x.Password == password);
         }
